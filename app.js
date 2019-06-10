@@ -7,11 +7,17 @@ var stage = new Konva.Stage({
 // add canvas element
 var layer = new Konva.Layer();
 stage.add(layer);
-
+var group = new Konva.Group({
+    x: 100,
+    y: 100,
+    width: 100,
+    height: 100,
+    fill: 'red',
+})
 // create shape
 var box = new Konva.Rect({
-    x: 50,
-    y: 50,
+    // x: 50,
+    // y: 50,
     width: 100,
     height: 50,
     fill: '#00D2FF',
@@ -19,7 +25,8 @@ var box = new Konva.Rect({
     strokeWidth: 4,
     draggable: true
 });
-layer.add(box);
+group.add(box)
+layer.add(group);
 
 layer.draw();
 
