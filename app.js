@@ -25,7 +25,24 @@ var box = new Konva.Rect({
     strokeWidth: 4,
     draggable: true
 });
+var circle = new Konva.Circle({
+    x: 150,
+    y: 150,
+    radius: 40,
+    fill: '#00D2FF',
+    stroke: 'black',
+    strokeWidth: 4,
+    ShadowOffsetY: 10,
+    ShadowOffsetX: 10,
+    ShadowBlur: 10,
+    draggable: true
+});
+
+// circle.cache()
+// circle.filters([Konva.filter.Blur])
+// circle.blurRadius(10)
 group.add(box)
+group.add(circle)
 layer.add(group);
 
 layer.draw();
