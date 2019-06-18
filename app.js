@@ -40,20 +40,40 @@ var circle = new Konva.Circle({
 
 //custom triangle shape
 var triangle = new Konva.Shape({
-    sceneFunc: function(context) {
-      context.beginPath();
-      context.moveTo(20, 50);
-      context.lineTo(220, 80);
-      context.quadraticCurveTo(150, 100, 260, 170);
-      context.closePath();
+    sceneFunc: function (context) {
+        context.beginPath();
+        context.moveTo(20, 50);
+        context.lineTo(220, 80);
+        context.quadraticCurveTo(150, 100, 260, 170);
+        context.closePath();
 
-      // special Konva.js method
-      context.fillStrokeShape(this);
+        // special Konva.js method
+        context.fillStrokeShape(this);
     },
     fill: '#00D2FF',
     stroke: 'black',
     strokeWidth: 4
 });
+
+var imageObj = new Image();
+imageObj.onload = function () {
+    var yoda = new Konva.Image({
+        x: 150,
+        y: 150,
+        image: imageObj,
+        width: 300,
+        height: 200,
+        draggable: true
+    });
+
+    group.add(yoda)
+    // // add the shape to the layer
+    // layer.add(yoda);
+
+    // // add the layer to the stage
+    // stage.add(layer);
+};
+imageObj.src = './images/smoke.jpg';
 group.add(box)
 group.add(circle)
 group.add(triangle)
