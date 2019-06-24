@@ -65,13 +65,9 @@ imageObj.onload = function () {
         height: 200,
         draggable: true
     });
-
+    yoda.cache();
+    yoda.filters([Konva.Filters.Blur]);
     group.add(yoda)
-    // // add the shape to the layer
-    // layer.add(yoda);
-
-    // // add the layer to the stage
-    // stage.add(layer);
 };
 imageObj.src = './images/smoke.jpg';
 group.add(box)
