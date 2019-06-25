@@ -27,23 +27,12 @@ function draw(images) {
     });
     var layer = new Konva.Layer();
 
-    var colorPentagon = new Konva.Rect({
+    var patternPentagon = new Konva.Rect({
         width: 200,
         height: 150,
-        stroke: 'black',
-        radius: 70,
-        fill: 'red',
-        stroke: 'black',
-        strokeWidth: 4,
-        fillPatternImage: images.darthVader,
-        fillPatternOffset: { x: -220, y: 70 },
-        draggable: true
-    });
-
-    var patternPentagon = new Konva.RegularPolygon({
         x: 220,
         y: stage.height() / 2,
-        sides: 5,
+        // sides: 5,
         radius: 70,
         fillPatternImage: images.darthVader,
         fillPatternOffset: { x: -220, y: 70 },
@@ -83,11 +72,6 @@ function draw(images) {
     /*
      * bind listeners
      */
-    colorPentagon.on('mouseover touchstart', function () {
-        this.fill('blue');
-        layer.draw();
-    });
-
     colorPentagon.on('mouseout touchend', function () {
         this.fill('red');
         layer.draw();
