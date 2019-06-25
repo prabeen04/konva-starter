@@ -1,7 +1,7 @@
 var stage = new Konva.Stage({
     container: 'container',
-    width: window.innerWidth,
-    height: window.innerHeight
+    width: 400,
+    height: 400,
 });
 
 // add canvas element
@@ -65,11 +65,9 @@ imageObj.onload = function () {
         height: 200,
         draggable: true
     });
-    yoda.cache();
-    yoda.filters([Konva.Filters.Blur]);
     group.add(yoda)
 };
-imageObj.src = './images/smoke.jpg';
+imageObj.src = './images/finger-print.jpg';
 group.add(box)
 group.add(circle)
 group.add(triangle)
