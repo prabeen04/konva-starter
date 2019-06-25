@@ -72,10 +72,6 @@ function draw(images) {
     /*
      * bind listeners
      */
-    colorPentagon.on('mouseout touchend', function () {
-        this.fill('red');
-        layer.draw();
-    });
 
     patternPentagon.on('mouseover touchstart', function () {
         this.fillPatternImage(images.yoda);
@@ -130,7 +126,6 @@ function draw(images) {
         layer.draw();
     });
 
-    layer.add(colorPentagon);
     layer.add(patternPentagon);
     layer.add(linearGradPentagon);
     layer.add(radialGradPentagon);

@@ -55,19 +55,6 @@ var triangle = new Konva.Shape({
     strokeWidth: 4
 });
 
-var imageObj = new Image();
-imageObj.onload = function () {
-    var yoda = new Konva.Image({
-        x: 150,
-        y: 150,
-        image: imageObj,
-        width: 300,
-        height: 200,
-        draggable: true
-    });
-    group.add(yoda)
-};
-imageObj.src = './images/finger-print.jpg';
 group.add(box)
 group.add(circle)
 group.add(triangle)
