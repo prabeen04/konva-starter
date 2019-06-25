@@ -34,7 +34,7 @@ function draw(images) {
         y: stage.height() / 2,
         // sides: 5,
         radius: 70,
-        fillPatternImage: images.darthVader,
+        fillPatternImage: images.yoda,
         fillPatternOffset: { x: -220, y: 70 },
         stroke: 'black',
         strokeWidth: 4,
@@ -74,13 +74,13 @@ function draw(images) {
      */
 
     patternPentagon.on('mouseover touchstart', function () {
-        this.fillPatternImage(images.yoda);
+        this.fillPatternImage(images.darthVader);
         this.fillPatternOffset({ x: -100, y: 70 });
         layer.draw();
     });
 
     patternPentagon.on('mouseout touchend', function () {
-        this.fillPatternImage(images.darthVader);
+        this.fillPatternImage(images.yoda);
         this.fillPatternOffset({ x: -220, y: 70 });
         layer.draw();
     });
