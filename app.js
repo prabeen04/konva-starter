@@ -1,7 +1,7 @@
 var stage = new Konva.Stage({
     container: 'container',
     width: 400,
-    height: 400,
+    height: 500,
 });
 
 // add canvas element
