@@ -54,21 +54,6 @@ function draw(images) {
         draggable: true
     });
 
-    var radialGradPentagon = new Konva.RegularPolygon({
-        x: 500,
-        y: stage.height() / 2,
-        sides: 5,
-        radius: 70,
-        fillRadialGradientStartPoint: { x: 0, y: 0 },
-        fillRadialGradientStartRadius: 0,
-        fillRadialGradientEndPoint: { x: 0, y: 0 },
-        fillRadialGradientEndRadius: 70,
-        fillRadialGradientColorStops: [0, 'red', 0.5, 'yellow', 1, 'blue'],
-        stroke: 'black',
-        strokeWidth: 4,
-        draggable: true
-    });
-
     /*
      * bind listeners
      */
@@ -102,33 +87,9 @@ function draw(images) {
         layer.draw();
     });
 
-    radialGradPentagon.on('mouseover touchstart', function () {
-        this.fillRadialGradientColorStops([
-            0,
-            'red',
-            0.5,
-            'yellow',
-            1,
-            'green'
-        ]);
-        layer.draw();
-    });
-
-    radialGradPentagon.on('mouseout touchend', function () {
-        // set multiple properties at once with setAttrs
-        this.setAttrs({
-            fillRadialGradientStartPoint: 0,
-            fillRadialGradientStartRadius: 0,
-            fillRadialGradientEndPoint: 0,
-            fillRadialGradientEndRadius: 70,
-            fillRadialGradientColorStops: [0, 'red', 0.5, 'yellow', 1, 'blue']
-        });
-        layer.draw();
-    });
 
     layer.add(patternPentagon);
     layer.add(linearGradPentagon);
-    layer.add(radialGradPentagon);
     stage.add(layer);
 }
 var sources = {
