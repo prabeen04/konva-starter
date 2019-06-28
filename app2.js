@@ -41,18 +41,6 @@ function draw(images) {
         draggable: true
     });
 
-    var linearGradPentagon = new Konva.RegularPolygon({
-        x: 360,
-        y: stage.height() / 2,
-        sides: 5,
-        radius: 70,
-        fillLinearGradientStartPoint: { x: -50, y: -50 },
-        fillLinearGradientEndPoint: { x: 50, y: 50 },
-        fillLinearGradientColorStops: [0, 'red', 1, 'yellow'],
-        stroke: 'black',
-        strokeWidth: 4,
-        draggable: true
-    });
 
     /*
      * bind listeners
