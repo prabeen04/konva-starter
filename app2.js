@@ -58,26 +58,8 @@ function draw(images) {
         layer.draw();
     });
 
-    linearGradPentagon.on('mouseover touchstart', function () {
-        this.fillLinearGradientStartPoint({ x: -50 });
-        this.fillLinearGradientEndPoint({ x: 50 });
-        this.fillLinearGradientColorStops([0, 'green', 1, 'yellow']);
-        layer.draw();
-    });
-
-    linearGradPentagon.on('mouseout touchend', function () {
-        // set multiple properties at once with setAttrs
-        this.setAttrs({
-            fillLinearGradientStartPoint: { x: -50, y: -50 },
-            fillLinearGradientEndPoint: { x: 50, y: 50 },
-            fillLinearGradientColorStops: [0, 'red', 1, 'yellow']
-        });
-        layer.draw();
-    });
-
 
     layer.add(patternPentagon);
-    layer.add(linearGradPentagon);
     stage.add(layer);
 }
 var sources = {
