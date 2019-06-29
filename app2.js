@@ -25,8 +25,18 @@ function draw(images) {
         width: width,
         height: height
     });
-    var layer = new Konva.Layer();
+    var simpleText = new Konva.Text({
+        x: stage.width() / 2,
+        y: 15,
+        text: 'Simple Text',
+        fontSize: 30,
+        fontFamily: 'Calibri',
+        fill: 'green'
+      });
 
+      // to align text in the middle of the screen, we can set the
+      // shape offset to the center of the text shape after instantiating it
+      simpleText.offsetX(simpleText.width() / 2);
     var patternPentagon = new Konva.Rect({
         width: 200,
         height: 150,
@@ -60,6 +70,7 @@ function draw(images) {
 
 
     layer.add(patternPentagon);
+    layer.add(simpleText);
     stage.add(layer);
 }
 var sources = {

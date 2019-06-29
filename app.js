@@ -28,7 +28,7 @@ var box = new Konva.Rect({
 var circle = new Konva.Circle({
     x: 150,
     y: 150,
-    radius: 40,
+    radius: 60,
     fill: '#00D2FF',
     stroke: 'black',
     strokeWidth: 4,
