@@ -25,6 +25,7 @@ function draw(images) {
         width: width,
         height: height
     });
+    
     var patternPentagon = new Konva.Rect({
         width: 200,
         height: 150,
