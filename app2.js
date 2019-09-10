@@ -40,24 +40,6 @@ function draw(images) {
         draggable: true
     });
 
-
-    /*
-     * bind listeners
-     */
-
-    patternPentagon.on('mouseover touchstart', function () {
-        this.fillPatternImage(images.darthVader);
-        this.fillPatternOffset({ x: -100, y: 70 });
-        layer.draw();
-    });
-
-    patternPentagon.on('mouseout touchend', function () {
-        this.fillPatternImage(images.yoda);
-        this.fillPatternOffset({ x: -220, y: 70 });
-        layer.draw();
-    });
-
-
     layer.add(patternPentagon);
     stage.add(layer);
 }
